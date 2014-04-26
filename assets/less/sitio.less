@@ -1,0 +1,272 @@
+.background-cover(){
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+body {
+  background-image: url("../images/home-invierno-4.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  .background-cover();
+}
+
+.site-content{
+  background-color: rgba(255,255,255,.5);
+}
+
+/* Encabezado de la Peli */
+.site-branding {
+  .site-title {
+    margin-bottom:5px;
+    margin-top: 5px;
+  }
+  .site-description{
+    margin-top: 5px;
+  }
+}
+
+.carousel-inner {
+  > .item {
+    > img {
+      .img-responsive();
+    }
+  }
+}
+
+// Optional captions
+// -----------------------------
+// Hidden by default for smaller viewports
+.carousel-caption {
+
+  h4 {
+    font-weight: 200;
+    @media (min-width: @screen-md-min) {
+      font-size: 4.5rem;
+    }
+    a {
+      color: @carousel-caption-color;
+      &:hover{
+        text-decoration: none;
+        color: @gray;
+
+      }
+    }
+  }
+  text-align: left;
+  background-color: rgba(0,0,0, .5);
+  width: 100%;
+  left: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+
+// Left/right controls for nav
+// Modification for Font Awesome 3.0.x compatibility
+// ---------------------------
+
+.carousel-control {
+  z-index: 25;
+  // Toggles
+  .icon-chevron-left,
+  .icon-chevron-right {
+    position: absolute;
+    top: 50%;
+    z-index: 15;
+    display: inline-block;
+  }
+
+  .icon-chevron-left {
+    left: 50%;
+  }
+  .icon-chevron-right {
+    right: 50%;
+  }
+
+}
+
+#myCarousel {
+  margin-bottom: 1.5em;
+}
+
+#primary {
+  .entry-title {
+    font-size: 28px;
+  }
+}
+
+.thumbnail {
+  img {
+    .img-responsive();
+  }
+}
+
+.portfolio_item {
+  .entry-url {
+    font-size: 20px;
+    &::before {
+      content: "\f08e";
+      font-family: 'FontAwesome';
+      font-weight: bold;
+    }
+  }
+  .entry-meta {
+    padding: @padding-large-vertical 0;
+    margin-bottom: @padding-large-vertical;
+    border-bottom: 1px solid @brand-primary;
+  }
+}
+
+/* Pie en lineas generales */
+.site-footer {
+  padding: 10px 0;
+  background: @gray-dark;
+  border-top: 4px solid @gray-darker;
+  min-height: 100px;
+  color: @gray-light;
+  a{
+    color: @gray-light;
+    &:hover {
+      text-decoration: none;
+      color: #FFAD00;
+    }
+  }
+  .site-info{
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+/* Sección en el Footer de Noticias */
+.noticias {
+
+  @media (min-width: @screen-md-min) {
+    border-left: 1px solid @gray-light;
+    padding-left: .8em;
+  }
+
+  .hentry {
+    margin: 0 0 .5em;
+  }
+  .entry-title {
+    margin: 0;
+    font-size: 16px;
+  }
+  .entry-content {
+    font-size: 12px;
+    margin: .35em 0 0;
+  }
+}
+
+/* Menu Social */
+.screen-reader-text {
+  position: absolute;
+  top:      -9999em;
+  left:     -9999em;
+}
+
+#menu-social {}
+
+#branding #menu-social {
+  position: absolute;
+  top: 3.8em;
+  right: 7.6%;
+}
+
+#menu-social ul {
+  list-style: none;
+  margin:     0 0 25px;
+  padding-left: 0;
+  text-align: center;
+  @media (min-width: @screen-md-min) {
+    text-align: left;
+  }
+}
+
+#menu-social ul li {
+  display:  inline-block;
+  position: relative;
+
+  a {
+    color:   @gray-lighter;
+    &:hover {
+      color:   @brand-primary;
+    }
+  }
+}
+
+#menu-social li a::before {
+  content:        '\f408';
+  display:        inline-block;
+  padding:        0 5px;
+  font-family:    'FontAwesome';
+  font-size:      36px;
+  vertical-align: top;
+
+  -webkit-font-smoothing: antialiased;
+  &:hover {
+    color:   @brand-primary;
+  }
+
+}
+
+#menu-social li a[href*="wordpress.org"]::before,
+#menu-social li a[href*="wordpress.com"]::before {
+  content: "\f087";
+  /*color:   #21759b;*/
+}
+#menu-social li a[href*="facebook.com"]::before {
+  content: "\f082";
+  /*color:   #3b5998;*/
+}
+#menu-social li a[href*="twitter.com"]::before {
+  content: "\f099";
+  /*color:   #33ccff;*/
+}
+#menu-social li a[href*="dribbble.com"]::before {
+  content: '\f201';
+  /*color:   #ea4c89;*/
+}
+#menu-social li a[href*="plus.google.com"]::before {
+  content: "\f0d4";
+  /*color: #dd4b39;*/
+}
+#menu-social li a[href*="pinterest.com"]::before {
+  content: '\f210';
+  /*color:   #c8232c;*/
+}
+#menu-social li a[href*="github.com"]::before {
+  content: '\f200';
+  /* color:   #171515;*/
+}
+#menu-social li a[href*="tumblr.com"]::before {
+  content: '\f214';
+  color:   #34526f;
+}
+#menu-social li a[href*="youtube.com"]::before {
+  content: '\f213';
+  /*color:   #c4302b;*/
+}
+#menu-social li a[href*="flickr.com"]::before {
+  content: '\f211';
+  /*color:   #ff0084;*/
+}
+#menu-social li a[href*="vimeo.com"]::before {
+  content: '\f212';
+  /*color:   #1AB7EA;*/
+}
+#menu-social li a[href*="instagram.com"]::before {
+  content: '\f215';
+  /*color:   #3f729b;*/
+}
+#menu-social li a[href*="codepen.io"]::before {
+  content: '\f216';
+  /*color:   #000;*/
+}
+#menu-social li a[href*="linkedin.com"]::before {
+  content: '\f208';
+  /*color:   #0e76a8;*/
+}
