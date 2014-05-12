@@ -14,7 +14,7 @@
                 
             <?php } else {?>
 
-                <img src="http://lorempixel.com/g/300/200/city/No-Tiene-Imagen" alt="No tiene imagen"/>
+                <img src="http://lorempixel.com/g/350/200/city/No-Tiene-Imagen" alt="No tiene imagen"/>
                     <?php }?>
                 </a>
             </div>
@@ -25,7 +25,7 @@
 
             <?php
             wp_link_pages( array(
-                'before' => '<div class="page-links">' . __( 'Trabajos:', 'imgdigital' ),
+                'before' => '<div class="page-links">' . __( 'Propiedades:', 'imgdigital' ),
                 'after'  => '</div>',
             ) );
             ?>

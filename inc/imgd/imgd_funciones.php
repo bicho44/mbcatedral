@@ -7,11 +7,11 @@ add_theme_support('jquery-cdn');
 /**
  * Otros elementos para este tema
  */
-define('RWMB_DIR', trailingslashit(STYLESHEETPATH . '/inc/meta-box'));
+//define('RWMB_DIR', trailingslashit(STYLESHEETPATH . '/inc/meta-box'));
 // Re-define meta box path and URL
-define('RWMB_URL', trailingslashit(get_stylesheet_directory_uri() . '/inc/meta-box'));
+//define('RWMB_URL', trailingslashit(get_stylesheet_directory_uri() . '/inc/meta-box'));
 
-require get_template_directory() . '/inc/meta-box/meta-box.php';// MetaBox functions
+//require get_template_directory() . '/inc/meta-box/meta-box.php';// MetaBox functions
 require get_template_directory() . '/inc/imgd/imgd_cleanup.php';
 require get_template_directory() . '/inc/imgd/imgd_images_sizes.php';
 
@@ -20,8 +20,8 @@ require get_template_directory() . '/inc/imgd/imgd_gallery.php';
 require get_template_directory() . '/inc/imgd/imgd_nav.php';
 require get_template_directory() . '/inc/imgd/imgd_widgets.php';
 
-require get_template_directory() . '/inc/imgd/imgd_propiedades_custom.php'; // Define Las Propiedades
-require get_template_directory() . '/inc/imgd/imgd_metaboxes.php'; // Define los MetaBoxes
+//require get_template_directory() . '/inc/imgd/imgd_propiedades_custom.php'; // Define Las Propiedades
+//require get_template_directory() . '/inc/imgd/imgd_metaboxes.php'; // Define los MetaBoxes
 
 require locate_template('inc/BFI_Thumb.php');         // Images Manipulation
 
