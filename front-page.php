@@ -19,7 +19,7 @@ get_header(); ?>
         <div id="primary" class="content-area row">
             <?php
             // Acá seleciono las Páginas que voy a mostrar en la Home
-            $args = array( 'post_type' => array( 'post', 'page', 'portfolio_item'),
+            $args = array( 'post_type' => array( 'post', 'page', 'portfolio_item', ),
                 'meta_key' => 'imgd_home',
                 'meta_value' => '1',
                 'post_status' => 'publish',

@@ -27,6 +27,12 @@
                     <?php } ?>
                 </div>
                 <div class="col-md-4 col-sm-12">
+                    <?php
+                    if (! dynamic_sidebar( 'footer-2' )){ ?>
+                        <div class="col-md-4">
+                            <img src="http://lorempixel.com/360/250/sports/4" alt="Google Adsense"/>
+                        </div>
+                    <?php } ?>
                     <main id="news" class="noticias" role="secondary">
                         <?php
                         // Acá seleciono las Páginas que voy a mostrar en la Home
@@ -58,6 +64,7 @@
                 </div>
             </div>
 			<div class="site-info row">
+                <?php get_template_part( 'templates/menu', 'legal' ); ?>
 				<?php do_action( 'imgdigital_credits' ); ?>
 				<?php printf( __( 'Theme: %1$s by %2$s.', 'imgdigital' ), 'MB Catedral', '<a href="http://imgdigital.com.ar" rel="designer">Federico Reinoso</a>' ); ?>
 			</div><!-- .site-info -->

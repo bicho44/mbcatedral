@@ -30,6 +30,7 @@ require locate_template('inc/BFI_Thumb.php');         // Images Manipulation
  */
 function imgd_register_social_menu() {
     register_nav_menu( 'social', __( 'Social', 'imgdigital' ) );
+    register_nav_menu( 'legal', __( 'Legales', 'imgdigital' ) );
 }
 add_action( 'init', 'imgd_register_social_menu' );
 

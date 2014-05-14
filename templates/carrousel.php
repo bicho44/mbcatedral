@@ -4,7 +4,7 @@
  */
 
 // Acá seleciono las Páginas que voy a mostrar en la Home
-$args = array('post_type' => array( 'post', 'page', 'portfolio_item', 'imgd_propiedades'),
+$args = array('post_type' => array( 'post', 'page', 'portfolio_item', 'imgd_propiedad'),
     'meta_key' => 'imgd_slideshow',
     'meta_value' => '1',
     'post_status' => 'publish',
