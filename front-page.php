@@ -15,43 +15,46 @@ get_header(); ?>
 
 <?php get_template_part('templates/carrousel'); ?>
 
-    <div class="container">
-        <div id="primary" class="content-area row">
-            <?php
-            // Acá seleciono las Páginas que voy a mostrar en la Home
-            $args = array( 'post_type' => array( 'post', 'page', 'portfolio_item', ),
-                'meta_key' => 'imgd_home',
-                'meta_value' => '1',
-                'post_status' => 'publish',
-                'post_per_page' => 6
-            );
-            $loop = new WP_Query($args);
+	<div class="container">
+		<div id="primary" class="content-area row">
+			<?php
 
-            if ($loop->have_posts()) {
-                $x = 0;?>
-            <div class="col-md-8 col-sm-12">
-                <div class="row">
-                <?php
-                    while ($loop->have_posts()) : $loop->the_post();
-                        get_template_part('content', 'front');
-                        $x++;
-                    endwhile;
-                ?>
-                </div>
-            </div>
-            <?php } /* else { ?>
-                <div class="col-md-4">
-                    <img src="http://lorempixel.com/360/250/food/1" alt="Google Adsense"/>
-                </div>
-                <div class="col-md-4">
-                    <img src="http://lorempixel.com/360/250/food/2" alt="Google Adsense"/>
-                </div>
-            <?php } */?>
-            <div class="col-md-4">
-                <?php dynamic_sidebar( 'front-page' ); ?>
-            </div>
-        </div><!-- #primary row-->
-    </div>
+			if(post_type_exists('imgd_propiedad')){
+				// Acá seleciono la lista de Propiedades que voy a mostrar en la Home
+				$args = array( 'post_type' => array( 'imgd_propiedad'),
+				               'post_status' => 'publish',
+				               'post_per_page' => 12,
+								'orderby' => 'rand'
+				);
+			} else {
+				// Acá seleciono las Páginas que voy a mostrar en la Home
+				$args = array( 'post_type' => array( 'post', 'page', 'portfolio_item', 'imgd_propiedad'),
+				               'meta_key' => 'imgd_slideshow',
+				               'meta_value' => '1',
+				               'post_status' => 'publish',
+				               'post_per_page' => 6
+				);
+			}
+			$loop = new WP_Query($args);
+
+			if ($loop->have_posts()) {
+				$x = 0;?>
+<!--				<div class="col-md-12 col-sm-12">-->
+					<div class="row">
+						<?php
+						while ($loop->have_posts()) : $loop->the_post();
+							get_template_part('content', 'front');
+							$x++;
+						endwhile;
+						?>
+					</div>
+<!--				</div>-->
+			<?php } ?>
+			<!--	            <div class="col-md-4">-->
+			<!--		            --><?php //dynamic_sidebar( 'front-page' ); ?>
+			<!--	            </div>-->
+		</div><!-- #primary row-->
+	</div>
 <?php do_action('imgdigital_postfront'); ?>
 
 <?php get_footer(); ?>

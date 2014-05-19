@@ -8,7 +8,7 @@ if ( has_nav_menu( 'legal' ) ) {
             'container_id'    => 'menu-legal',
             'container_class' => 'menu',
             'menu_id'         => 'menu-legal-items',
-            'menu_class'      => 'menu-items',
+            'menu_class'      => 'menu-items list-unstyled',
             'depth'           => 1,
             'link_before'     => '',
             'link_after'      => '',
