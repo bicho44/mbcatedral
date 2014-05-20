@@ -219,7 +219,7 @@ function imgd_parametros_thumbnail($thumbnail_name=""){
  * @param string $alttext
  * @return string HTML de la imagen
  */
-function imgd_thumbnail($postID, $size='full-cropped', $alttext=""){
+function imgd_thumbnail($postID, $size='full-cropped', $alttext="", $class="imgdecor"){
 
     /* Obtengo el URL de la imagen principal */
     $post_thumbnail_id = get_post_thumbnail_id($postID);
@@ -231,7 +231,7 @@ function imgd_thumbnail($postID, $size='full-cropped', $alttext=""){
     $params = imgd_parametros_thumbnail($size);
 
     /* HTML a devolver */
-    $imagen = '<img src="' . bfi_thumb( $html[0], $params ) . '" alt="' . $alttext . '">';
+    $imagen = '<img src="'. bfi_thumb( $html[0], $params ) .'" alt="'. $alttext .'" class="'. $class .'" >';
 
     return $imagen;
 }

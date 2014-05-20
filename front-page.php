@@ -15,7 +15,7 @@ get_header(); ?>
 
 <?php get_template_part('templates/carrousel'); ?>
 
-	<div class="container">
+<!--	<div class="container">-->
 		<div id="primary" class="content-area row">
 			<?php
 
@@ -40,21 +40,21 @@ get_header(); ?>
 			if ($loop->have_posts()) {
 				$x = 0;?>
 <!--				<div class="col-md-12 col-sm-12">-->
-					<div class="row">
+<!--					<div class="row">-->
 						<?php
 						while ($loop->have_posts()) : $loop->the_post();
 							get_template_part('content', 'front');
 							$x++;
 						endwhile;
 						?>
-					</div>
+<!--					</div>-->
 <!--				</div>-->
 			<?php } ?>
 			<!--	            <div class="col-md-4">-->
 			<!--		            --><?php //dynamic_sidebar( 'front-page' ); ?>
 			<!--	            </div>-->
 		</div><!-- #primary row-->
-	</div>
+<!--	</div>-->
 <?php do_action('imgdigital_postfront'); ?>
 
 <?php get_footer(); ?>

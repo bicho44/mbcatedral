@@ -7,7 +7,7 @@
 get_header();
 
 // while (have_posts()) : the_post(); ?>
-    <article <?php post_class('col-md-9') ?> id="post-<?php the_ID(); ?>">
+    <article <?php post_class('col-md-8') ?> id="post-<?php the_ID(); ?>">
         <header>
             <?php echo the_terms('', 'imgd_propiedad_tipo'); ?>
             <h1 class="entry-title"><?php the_title(); ?>
@@ -19,7 +19,7 @@ get_header();
         <div class="entry-content">
             <?php
             if (has_post_thumbnail()) {
-                echo imgd_thumbnail(get_the_ID(), 'tablet');
+                echo imgd_thumbnail(get_the_ID(), 'tablet', get_the_title() );
                 //the_post_thumbnail(img_get_size_thumbnail(), array('class' => "imgdecor"));
             }
 
@@ -62,7 +62,9 @@ get_header();
             </div>
             <?php
             if(function_exists('jqlb_apply_lightbox')){
-                echo jqlb_apply_lightbox(do_shortcode("[gallery link=file]"), "gallery-nowik");
+                echo jqlb_apply_lightbox(do_shortcode('[gallery size="thumb-archive" link="file"]'), "gallery-nowik");
+            } else {
+	            echo do_shortcode('[gallery size="thumb-archive"]');
             }
             ?>
         </div>
