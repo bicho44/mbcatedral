@@ -49,7 +49,7 @@ function roots_gallery($attr) {
 
   $id = intval($id);
   $columns = (12 % $columns == 0) ? $columns: 4;
-  $grid = sprintf('col-sm-%1$s col-lg-%1$s', 12/$columns);
+  $grid = sprintf('col-sm-%1$s col-md-%1$s col-lg-%1$s', 12/$columns);
 
   if ($order === 'RAND') {
     $orderby = 'none';
@@ -82,7 +82,20 @@ function roots_gallery($attr) {
 
   $unique = (get_query_var('page')) ? $instance . '-p' . get_query_var('page'): $instance;
   $output = '<div class="gallery gallery-' . $id . '-' . $unique . '">';
-
+?>
+	<!-- <div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img data-src="holder.js/300x200" alt="...">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div> end thumbnail
+  </div>
+</div> <!-- end row -->
+	<?php
   $i = 0;
   foreach ($attachments as $id => $attachment) {
     $image = ('file' == $link) ? wp_get_attachment_link($id, $size, false, false) : wp_get_attachment_link($id, $size, true, false);

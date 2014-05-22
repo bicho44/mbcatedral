@@ -68,14 +68,6 @@ get_header();
             }
             ?>
         </div>
-        <footer>
-            <?php //get_template_part('templates/entry-meta'); ?>
-            <?php the_tags('<ul class="entry-tags"><li>', '</li><li>', '</li></ul>'); ?>
-
-            <?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
-        </footer>
-
-
 
         <!-- Modal Form -->
         <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -94,6 +86,18 @@ get_header();
         <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
             Consultar
         </button>
+
+	    <footer>
+		    <?php //get_template_part('templates/entry-meta'); ?>
+		    <?php the_tags('<ul class="entry-tags"><li>', '</li><li>', '</li></ul>'); ?>
+
+<!--		    <ul class="pager">-->
+<!--			    <li class="previous"><a href="#">--><?php //previous_post_link(); ?><!--</a></li>-->
+<!--			    <li class="next"><a href="#">--><?php //next_post_link(); ?><!--</a></li>-->
+<!--		    </ul>-->
+		    <?php imgdigital_post_nav(); ?>
+
+	    </footer>
 
         <?php //comments_template('/templates/comments.php'); ?>
     </article>

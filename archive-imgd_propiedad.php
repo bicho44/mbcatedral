@@ -16,11 +16,7 @@ get_header(); ?>
 
 			<header class="page-header">
 				<h1 class="page-title">
-					<?php
-
-							_e( 'Propiedades', 'imgdigital' );
-
-					?>
+					<?php _e( 'Propiedades', 'imgdigital' ); ?>
 				</h1>
 				<?php
 					// Show an optional term description.
@@ -31,10 +27,13 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
+			<?php /* Start the Loop */
+			$x = 1;
+			?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
+
 					/* Include the Post-Format-specific template for the content.
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
